@@ -15,8 +15,8 @@ class InboxView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         return Thread.objects.by_user(self.request.user)
 
-
-class ThreadView(LoginRequiredMixin, FormMixin, DetailView):
+#LoginRequiredMixin,
+class ThreadView(FormMixin, DetailView):
     template_name = 'chat/thread.html'
     form_class = ComposeForm
     success_url = './'

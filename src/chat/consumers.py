@@ -22,7 +22,7 @@ class ChatConsumer(AsyncConsumer):
         print("recieve", event)
         await self.send({
             "type": "websocket.send",
-            "text": event.get("text")
+            "text": "recieved on backend"
         })
 
 

@@ -12,13 +12,13 @@ from chat.consumers import ChatConsumer
 application = ProtocolTypeRouter({
     # Empty for now (http->django views is added by default)
     'websocket': AllowedHostsOriginValidator(
-        AuthMiddlewareStack(
-            URLRouter(
-                [
-                    re_path(r"^(?P<username>[\w.@+-]+)", ChatConsumer),
-                ]
-            )
+
+        URLRouter(
+            [
+                re_path(r"^messages/(?P<username>[\w.@+-]+)", ChatConsumer),
+            ]
         )
+
     )
 })
 #r"^messages/(?P<username>[\w.@+-]+)/$"
