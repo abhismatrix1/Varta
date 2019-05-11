@@ -1,5 +1,5 @@
-# Chat-Channels
-This repo contains django channels structure (app) for real time chatbot application
+# Varta - Real time Chatbot framework
+Varta is a real time chatbot application in python django framework
 
 
 
